@@ -1,0 +1,19 @@
+11 
+1 Fever or chills
+2 Cough
+3 Shortness of breath or difficulty breathing
+4 Fatigue
+5 Muscle or body aches
+6 Headache
+7 New loss of taste or smell
+8 Sore throat
+9 Congestion or runny nose
+10 Nausea or vomiting
+11 Diarrhea
+6
+1 4 3 4 7 8 
+2 2 1 5
+3 6 2 3 6 7 10 11
+4 4 5 6 9 10
+5 4 1 2 3 4
+6 3 7 8 11

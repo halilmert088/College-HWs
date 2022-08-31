@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fact(int a)
+{
+    int fact = 1;
+    if ((a == 0) || (a == 1))
+    return (1);
+    
+    while (a > 1)
+    {
+          fact = fact * a;
+          a--;
+    }
+    
+    return (fact);
+}
+
+void calc (int n, int r, int *combination, int *permutation)
+{
+     *permutation = fact (n) / fact (n - r);
+     *combination = fact (n) / (fact (r) / fact (n - r));
+}
+
+int main (void)
+{
+    int n, r, combination, permutation;
+    printf("Enter N value: ");
+    scanf("%d", &n);
+    printf("Enter R value: ");
+    scanf("%d", &r);
+    while ((n >= 0) && (r >= 0))
+    {
+          while (n <= r)
+          {
+                printf("N value should be greater than R value ! Try again.\n\n");
+                printf("Enter N value: ");
+                scanf("%d", &n);
+                printf("Enter R value: ");
+                scanf("%d", &r);
+                
+                if ((n < 0) || (r < 0))
+                {
+                       printf("Error : N or R value should be equal or greater than zero. Bye!\n");
+                       system("PAUSE");
+                       return(0);
+                }
+          }
+          
+          calc (n, r, &combination, &permutation);
+          
+          printf("Combination : C (%d, %d) = %.2f\n", n, r, (float) combination);
+          printf("Permutation : P (%d, %d) = %.2f\n", n, r, (float) permutation);
+          printf("\n");
+          
+          printf("Enter N value: ");
+          scanf("%d", &n);
+          printf("Enter R value: ");
+          scanf("%d", &r);
+    }
+    printf("Error : N or R value should be equal or greater than zero. Bye !\n");
+    return (0);
+    }

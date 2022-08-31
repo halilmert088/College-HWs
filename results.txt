@@ -1,0 +1,3 @@
+Mean: 6.20
+Maximum: 11
+Minimum: 1
